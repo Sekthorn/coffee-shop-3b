@@ -1,0 +1,39 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header>
+  <div class="wrap bar">
+    <nav id="nav" aria-label="Main">
+      <a href="#menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"></path>
+          <path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"></path>
+          <path d="M8 3v2M12 3v2"></path>
+        </svg>
+        Menu
+      </a>
+      <a href="#story">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 0 4 20.5z"></path>
+          <path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 1 1.5 1.5z"></path>
+        </svg>
+        Story
+      </a>
+      <a href="#visit">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"></path>
+          <circle cx="12" cy="9.5" r="2.5"></circle>
+        </svg>
+        Visit
+      </a>
+    </nav>
+    <a href="#" class="logo" aria-label="3.B Coffee, home">
+      <span class="logo-img logo-word" role="img" aria-label="3.B Coffee"></span>
+    </a>
+    <div class="bar-cta">
+      <ThemeToggle />
+      <a href="#visit" class="btn btn-outline">Reserve a table</a>
+    </div>
+  </div>
+</header>

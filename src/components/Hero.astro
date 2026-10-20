@@ -1,0 +1,22 @@
+---
+// When replacing the placeholder with a real image:
+// import { Image } from 'astro:assets';
+// import heroImg from '../assets/hero.jpg';
+---
+
+<section class="hero">
+  <div class="wrap">
+    <span class="logo-img logo-mark hero-logo" role="img" aria-label="3.B Coffee logo"></span>
+    <p class="eyebrow">Est. [Year] · Specialty coffee</p>
+    <h1>Crafted slowly. Poured with intention.</h1>
+    <p class="lead">[One refined sentence about the café, the roast and the atmosphere.]</p>
+    <div class="actions">
+      <a href="#menu" class="btn">Explore the menu</a>
+      <a href="#story" class="btn btn-ghost">Our story</a>
+    </div>
+    <!-- Replace with: <Image src={heroImg} alt="Moody café interior with warm pendant lights and espresso bar" class="hero-img" style="width:100%;height:auto;object-fit:cover;border-radius:8px" /> -->
+    <div class="ph hero-img" role="img" aria-label="Hero photo placeholder">
+      [WIDE HERO PHOTO: moody café interior, warm pendant lights, espresso bar]
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import menuItems from '../data/menu.json';
+
+const imageModules = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/menu/*.{png,jpg,jpeg,webp,avif}',
+  { eager: true }
+);
+
+function getMenuImage(filename: string): ImageMetadata {
+  const match = Object.entries(imageModules).find(([path]) => path.endsWith(`/${filename}`));
+  if (!match) {
+    throw new Error(`Image "${filename}" not found in src/assets/menu/`);
+  }
+  return match[1].default;
+}
+---
+
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <p class="eyebrow">The menu</p>
+        <h2>Signature selection</h2>
+      </div>
+      <a href="#" class="link">View full menu</a>
+    </div>
+    <div class="cards">
+      {
+        menuItems.map((item) => (
+          <article class="card" id={item.id} tabindex="0">
+            <div class="card-media">
+              <Image
+                class="card-img"
+                src={getMenuImage(item.image)}
+                alt={item.alt}
+                loading="lazy"
+              />
+            </div>
+            <div class="card-top">
+              <h3>{item.name}</h3>
+              <span class="price">{item.price}</span>
+            </div>
+            <p>{item.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  /* iOS Safari only applies :active styles when a touch listener exists */
+  document.addEventListener('touchstart', function () {}, { passive: true });
+</script>

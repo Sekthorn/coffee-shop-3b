@@ -1,0 +1,26 @@
+[
+  {
+    "id": "iced-matcha",
+    "name": "Iced Matcha Latte",
+    "price": "$2",
+    "description": "Ceremonial-grade matcha, refreshingly chilled, with a smooth and creamy finish.",
+    "image": "iced-matcha.png",
+    "alt": "Iced Matcha Latte in a clear 3B Coffee cup on a green background"
+  },
+  {
+    "id": "iced-hot-coffee",
+    "name": "Iced or Hot Coffee",
+    "price": "[PRICE]",
+    "description": "Your coffee your way, served over ice or piping hot.",
+    "image": "iced-hot-coffee.png",
+    "alt": "An iced coffee and a hot coffee in 3B Coffee cups"
+  },
+  {
+    "id": "coffee-latte",
+    "name": "Coffee Latte, 22 oz",
+    "price": "7,500 riel",
+    "description": "Made from quality beans with fresh milk. Smooth, creamy and perfectly balanced.",
+    "image": "coffee-latte.png",
+    "alt": "Iced coffee latte in a 22 oz 3B Coffee cup with coffee beans"
+  }
+]
